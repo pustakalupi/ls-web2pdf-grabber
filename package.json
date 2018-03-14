@@ -1,0 +1,19 @@
+{
+  "name": "ls-web2pdf-grabber",
+  "version": "1.0.0",
+  "description": "Whole website to pdf converter",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/lusfikars/ls-web2pdf-grabber.git"
+  },
+  "author": "Lusfikar Sheba",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/lusfikars/ls-web2pdf-grabber/issues"
+  },
+  "homepage": "https://github.com/lusfikars/ls-web2pdf-grabber#readme"
+}
