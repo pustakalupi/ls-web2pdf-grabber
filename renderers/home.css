@@ -1,0 +1,11 @@
+body {
+  padding-top: 10px;
+}
+
+html,body{
+  height:100%;
+}
+
+.fill {
+  flex:1;
+}

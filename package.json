@@ -4,6 +4,7 @@
   "description": "Whole website to pdf converter",
   "main": "index.js",
   "scripts": {
+    "start": "electron .",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
@@ -15,5 +16,8 @@
   "bugs": {
     "url": "https://github.com/lusfikars/ls-web2pdf-grabber/issues"
   },
-  "homepage": "https://github.com/lusfikars/ls-web2pdf-grabber#readme"
+  "homepage": "https://github.com/lusfikars/ls-web2pdf-grabber#readme",
+  "dependencies": {
+    "nightmare": "^3.0.0"
+  }
 }
