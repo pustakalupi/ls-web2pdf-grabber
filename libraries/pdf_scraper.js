@@ -163,11 +163,12 @@ PDFScraper.prototype.doScraping = function (nobj, urlTarget, comparator, out, le
         return;
     }
 
-
+    /*
     if(this.onScrapeProgressCallback){
         var prog = this.downloadLimit == -1 ? (leftListCtr1/leftList.length) * 100 : (leftListCtr1/Math.min(leftList.length, this.downloadLimit -1)) * 100;
         this.onScrapeProgressCallback(prog);
     }
+    */
     
     var self = this;
     require('request')(urlTarget, function (error, response, body) {
@@ -205,7 +206,7 @@ PDFScraper.prototype.doScraping = function (nobj, urlTarget, comparator, out, le
                     for(var j = 0; j < splitted.length; j++){
                         var len2 = results.theHREFS[i].search(splitted[j]);
                         if(len2 != -1){
-                            console.log("junk: " + splitted.length + " => " + results.theHREFS[i]);
+                            //console.log("junk: " + splitted.length + " => " + results.theHREFS[i]);
                             jCtr++;
                         }
                     }
@@ -218,7 +219,12 @@ PDFScraper.prototype.doScraping = function (nobj, urlTarget, comparator, out, le
                 }
             }
 
-            console.log(urlTarget);
+            //console.log(urlTarget + "=>" + (leftListCtr1 + 1) + "/" + Math.min((leftList.length + 1), self.downloadLimit));
+            if(self.onScrapeProgressCallback){
+                var prog = self.downloadLimit == -1 ? ((leftListCtr1 + 1)/(leftList.length + 1)) * 100 : ((leftListCtr1 + 1)/Math.min((leftList.length + 1), self.downloadLimit)) * 100;
+                self.onScrapeProgressCallback(prog);
+            }
+
             if(self.onScrapeOneDownloadFinishedCallback){
                 self.onScrapeOneDownloadFinishedCallback(urlTarget);
             }
