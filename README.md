@@ -3,4 +3,4 @@ Whole website to pdf converter.
 
 For commercial purpose, please refer to this page:
 
-http://www.lusfikars.space/2018/10/electron-web-eater-script.html
+https://srakifsul.netlify.com/web-eater-an-electron-based-website-to-pdf-downloader-for-windows.html
